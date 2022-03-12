@@ -1,46 +1,34 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O mundo atual consiste em um cenário globalizado, interligado, onde a troca de informações ocorre de forma bastante rápida e as conexões acontecem instantaneamente. Porém, nem sempre as informações importantes e necessárias chegam às mãos daqueles que as precisam, seja por falta de recurso financeiro, por não saberem como buscá-las, aproveitá-las, ou disponibilizá-las.
+A busca por livros é um exemplo disso. Os livros tiveram que acompanhar essa evolução, sendo disponibilizados em plataformas online, diversificando a sua forma de consumo. Embora isso pareça uma tarefa fácil nos dias de hoje, é visto como dificuldade por uma parte da população. Muitos se queixam da dificuldade em encontrar, por meio de pesquisas virtuais, locais que disponibilizam livros literários e até mesmo material de apoio para estudo, como apostilas. E se torna necessário o deslocamento presencial até os estabelecimentos comerciais, criando um problema adicional em meio à pandemia do Coronavírus, no qual há restrição de locomoção e aglomeração de pessoas. Os estabelecimentos comerciais, por sua vez, podem ofertar o produto por valores mais caros devido aos custos de manutenção do espaço físico.
+O comércio digital simplificou a forma de fazer compras no geral, mas a maioria das plataformas atuais de compra de livros dão destaque para a venda de exemplares novos e não possuem ferramentas práticas para que as pessoas possam compartilhar livros digitais de forma gratuita.
+Diante disso, levantou-se a necessidade de um software que permita aos usuários adquirir e compartilhar ebooks de forma gratuita e solidária, possibilitando o acesso a livros digitais de distribuição livre para uma parcela mais carente da população.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Conforme o exposto, o projeto tem o intuito de levar a educação e cultura principalmente para as pessoas mais carentes e minimizar a dificuldade encontrada por essas pessoas em adquirir e compartilhar livros em formato digital, sejam eles literários ou didáticos.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste trabalho é a criação de um software que apresente uma interface de fácil uso e que permita a interação entre os usuários, de forma que contribuam compartilhando livros no formato digital e também permitindo o uso do material disponível no software. 
+Como objetivos específicos, podemos ressaltar:
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+* Fornecer funcionalidades que permitam publicar ebooks;
+* Fornecer funcionalidades que permitam baixar ebooks disponíveis;
+* Permitir a interação entre usuários via chat;
+* Fornecer filtros nos campos de busca que permitam localizar informações sobre um livro específico de forma assertiva.
+* Fornecer funcionalidades que permitam aos usuários sugerirem livros a serem publicados.
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A população carente cresce a cada dia no Brasil e além disso, o capitalismo se torna o foco das relações e pagam-se preços altos pela educação e cultura.
+Um software de disponibilização de livros de forma gratuita muda a relação entre as pessoas e o acesso à educação e à cultura, possibilitando o compartilhamento e upload de ebooks. Desta forma, as pessoas se reconhecem na dificuldade do outro e podem, assim, se ajudarem mutuamente.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Diversas pessoas podem ser beneficiadas com este projeto, o principal foco é o público mais carente que têm dificuldades em adquirir livros e buscam uma plataforma para compartilhar livros gratuitos disponibilizados com direitos autorais, sejam livros literários ou didáticos em formato digital.
+Sendo assim, estabeleceu-se como público alvo homens e mulheres entre 15 e 40 anos, que estudam, trabalham, com o hábito frequente de leitura e buscam acesso a livros gratuitos com maior interação de usuários de mesmo objetivo. 
