@@ -1,23 +1,27 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`PROJETO - DESENCOLVIMENTO DE UMA APLICAÇÃO INTERATIVA`
 
-`SEMESTRE`
+`SEGUNDO SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto tem o intuito de levar a educação e cultura principalmente para as pessoas mais carentes e minimizar a dificuldade encontrada por essas pessoas em adquirir e compartilhar livros em formato digital, sejam eles literários ou didáticos.
+Diante disso, levantou-se a necessidade de um software que permita aos usuários adquirir e compartilhar ebooks de forma gratuita e solidária, possibilitando o acesso a livros digitais de distribuição livre para uma parcela mais carente da população. 
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Alex Junio
+* Álvaro Alfaya Fonseca
+* Denio Gonçalves de Lima
+* Hestefani Romão Durães
+* Mychel Costa da Silva
+* Talles Monteiro Góis
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Rosilane Mota
 
 ## Instruções de utilização
 

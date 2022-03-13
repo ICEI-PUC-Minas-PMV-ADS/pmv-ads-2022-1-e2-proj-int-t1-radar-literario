@@ -7,7 +7,7 @@ Diante disso, levantou-se a necessidade de um software que permita aos usuários
 
 ## Problema
 
-Conforme o exposto, o projeto tem o intuito de levar a educação e cultura principalmente para as pessoas mais carentes e minimizar a dificuldade encontrada por essas pessoas em adquirir e compartilhar livros em formato digital, sejam eles literários ou didáticos.
+Diante do exposto, é notório que uma parcela da população tem a dificuldade em encontrar livros de diversos gêneros, como literaturas, biográfias e matérias de apoio para estudos como apostilas e livros didáticos, uma vez que o comércio digital tem enfasê em venda e não disponibilidade de forma gratuíta. 
 
 ## Objetivos
 
@@ -24,11 +24,10 @@ Como objetivos específicos, podemos ressaltar:
 ## Justificativa
 
 A população carente cresce a cada dia no Brasil e além disso, o capitalismo se torna o foco das relações e pagam-se preços altos pela educação e cultura.
-Um software de disponibilização de livros de forma gratuita muda a relação entre as pessoas e o acesso à educação e à cultura, possibilitando o compartilhamento e upload de ebooks. Desta forma, as pessoas se reconhecem na dificuldade do outro e podem, assim, se ajudarem mutuamente.
-
+Um software de disponibilização de livros de forma gratuita muda a relação entre as pessoas e o acesso à educação e à cultura, possibilitando o compartilhamento e download de ebooks. Desta forma, as pessoas se reconhecem na dificuldade do outro e podem, assim, se ajudarem mutuamente.
 
 
 ## Público-Alvo
 
-Diversas pessoas podem ser beneficiadas com este projeto, o principal foco é o público mais carente que têm dificuldades em adquirir livros e buscam uma plataforma para compartilhar livros gratuitos disponibilizados com direitos autorais, sejam livros literários ou didáticos em formato digital.
-Sendo assim, estabeleceu-se como público alvo homens e mulheres entre 15 e 40 anos, que estudam, trabalham, com o hábito frequente de leitura e buscam acesso a livros gratuitos com maior interação de usuários de mesmo objetivo. 
+Diversas pessoas podem ser beneficiadas com este projeto, o principal foco é o público mais carente que têm dificuldades em adquirir livros e também pessosas que buscam uma plataforma para compartilhar livros de forma gratuita, disponibilizados com direitos autorais, sejam livros literários ou didáticos em formato digital.
+Sendo assim, estabeleceu-se como público alvo homens e mulheres entre 15 e 40 anos, que estudam, trabalham ou que simplesmente tem o hábito de ler e buscam acesso a livros gratuitos, e que queiram criar um ambiente de troca entre usuários de mesmo objetivo.
