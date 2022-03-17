@@ -3,7 +3,20 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
+A metodologia contempla as definições de ferramental utilizado pela equipe tanto para a manutenção dos códigos e demais artefatos quanto para a organização do time na execução das tarefas do projeto.
+
 Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+
+## Relação de Ambientes de Trabalho
+
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue
+
+Ambiente|Plataforma|Link de Acesso
+|:--------|:----------:|:--------------:|
+|Repositório|GitHub|  [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario)|
+|Documentos do projeto|GitHubDocs|Projeto Radar Literario|[GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/tree/main/docs)|
+|Projeto de Interface e  Wireframes| Diagrams.net | [Diagrams.net](https://www.diagrams.net/)|
+|Gerenciamento do Projeto|Jira|[Jira](https://ads-puc.atlassian.net/jira/software/c/projects/RLE/boards/2/roadmap)|
 
 ## Controle de Versão
 
@@ -39,12 +52,16 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento.  
+Senndo assim, o time está organizado da seguinte maneira:  
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+* _Scrum Master_: Hestefani Romão Durães
+* _Product Owner_: Álvaro Alfaya Fonseca
+* Equipe de Desenvolvimento
+  - Talles Monteiro Góis
+  - Mychel Costa da Silva
+  -	Alex Junio Gomes De Freitas
+  -	Denio Gonçalves de Lima
 
 ### Processo
 
@@ -60,18 +77,12 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Editor de código: Visual Studio.
+- Ferramentas de comunicação: Microsoft Teams
+- Ferramentas para criação de diagramas: Diagrams.net
+- Ferramentas de desenho de tela (_wireframing_): Adobe XD
 
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+O editor de código foi escolhido porque ele possui uma integração com o sistema de versão e permite depuração na máquina local. 
+A ferramenta de comunicação utilizada foi recomendada pela Universidade e é bem completa para gestão de equipes e viabiliza chamadas de áudio, vídeo e conversa por chat. 
+Para criar diagramas Optamos pelo Diagrams.net recomendado pela professora, porque ele se adaptou-se melhor as nossas necessidades para as soluções dos problemas. 
+Por fim, a ferramenta escolhida para o desenvolvimento dos wireframes e interface de usuário foi ecolhida por permitir a edição colaborativa, além de ter funcionalidades voltadas especificamente para a natureza deste trabalho.
