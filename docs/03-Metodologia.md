@@ -25,21 +25,18 @@ foi utilizado para hospedagem do repositório.
 ![](./img/gitFlow.png)
 
 O projeto segue a seguinte convenção para o nome de branches:
+`d/prefixo do card-numero/nome-da-branch`
+- main: versão estável já testada do software
+- *d/*: documentações 
+- *f/*: novas funcionalidades
+- *b/*: correção de bug
 
-- `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
-
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
-
-- `bug`: uma funcionalidade encontra-se com problemas
-- `design`: processos que visam a implementação da interface gráfica.
-- `documentação`: melhorias ou acréscimos à documentação
-- `implementação`: uma funcionalidade precisa ser melhorada
-- `funcionalidade`: uma nova funcionalidade precisa ser introduzida
-- `gestao de projetos`: processos que auxiliam no planejamento do projeto.
+Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
+documentation: melhorias ou acréscimos à documentação
+- *bug*: uma funcionalidade encontra-se com problemas
+- *design*: definições de UI e template da aplicação
+- *melhoria*: uma funcionalidade precisa ser melhorada
+- *implementação*: uma nova funcionalidade precisa ser introduzida
 
 ## Gerenciamento de Projeto
 
