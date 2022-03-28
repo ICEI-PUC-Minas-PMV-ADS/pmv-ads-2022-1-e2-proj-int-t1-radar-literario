@@ -5,44 +5,44 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 ## Personas
 
 ##### GUILHERME DIAS
-Idade: 17 Anos.
-Ocupação: Estudante.
-Aplicativos: TikTok, Twitter, Instagram e YouTube.
-Motivação: Guilherme já está pensando no Enem e como pretende estudar. E para seguir carreira na área de tecnologia precisa de uma boa base de estudos para conseguir seus objetivos. 
-Frustrações: Infelizmente, não tem boas condições financeiras para se matricular em cursinhos, ou adquirir algumas apostilas de estudo.
-Hobbies: Gosta de sair com os amigos nos finais de semana, adora jogar video game, animes e mangás.
+**Idade:** 17 Anos.  
+**Ocupação:** Estudante.  
+**Aplicativos:** TikTok, Twitter, Instagram e YouTube.  
+**Motivação:** Guilherme já está pensando no Enem e como pretende estudar. E para seguir carreira na área de tecnologia precisa de uma boa base de estudos para conseguir seus objetivos.  
+**Frustrações:** Infelizmente, não tem boas condições financeiras para se matricular em cursinhos, ou adquirir algumas apostilas de estudo.  
+**Hobbies:** Gosta de sair com os amigos nos finais de semana, adora jogar video game, animes e mangás.  
 
 ##### NATHALIA GOMES 
-Idade: 38 Anos.
-Ocupação: Assistente Administrativa.
-Aplicativos: Linkedin, Instagram e Telegram.
-Motivação: Nathalia quer complementar seus conhecimentos acadêmicos e se tornar uma profissional mais qualificada e assim ser contratada pela empresa no final do estágio.
-Frustrações: Nathalia não tem condição no momento de adquirir materiais de apoio para auxiliar no seu estudo, tendo que procurar conteúdo de graças na internet.
-Hobbies: Gosta de ver séries, filmes e sair com os amigos, gosta bastante de ler, seu gênero de livro preferido e ficção.
+**Idade:** 38 Anos.  
+**Ocupação:** Assistente Administrativa.  
+**Aplicativos:** Linkedin, Instagram e Telegram.  
+**Motivação:** Nathalia quer complementar seus conhecimentos acadêmicos e se tornar uma profissional mais qualificada e assim ser contratada pela empresa no final do estágio.  
+**Frustrações:** Nathalia não tem condição no momento de adquirir materiais de apoio para auxiliar no seu estudo, tendo que procurar conteúdo de graças na internet.  
+**Hobbies:** Gosta de ver séries, filmes e sair com os amigos, gosta bastante de ler, seu gênero de livro preferido e ficção.  
 
 ##### ISABEL FIGUEIREDO
-Idade: 23 Anos.
-Ocupação: Operadora de Caixa
-Aplicativos: Twitter, Spotify, Instagram e WhatsApp.
-Motivação: É uma leitora voraz de escritores brasileiros como Machado de Assis e Clarice Lispector. 
-Frustrações: Sente que pode compartilhar mais sobre a grandeza da literatura brasileira compartilhando seus ebooks adquiridos anteriormente de forma gratuita e com todos os direitos autorais preservados.
-Hobbies: Gosta de contribuir com um programa de incentivo a leitura da escola local, ama sair com amigos e trocar experiências.
+**Idade:** 23 Anos.  
+**Ocupação:** Operadora de Caixa.  
+**Aplicativos:** Twitter, Spotify, Instagram e WhatsApp.  
+**Motivação:** É uma leitora voraz de escritores brasileiros como Machado de Assis e Clarice Lispector.  
+**Frustrações:** Sente que pode compartilhar mais sobre a grandeza da literatura brasileira compartilhando seus ebooks adquiridos anteriormente de forma gratuita e com todos os direitos autorais preservados.  
+**Hobbies:** Gosta de contribuir com um programa de incentivo a leitura da escola local, ama sair com amigos e trocar experiências.  
 
 ##### ANTÔNIO CALDEIRA
-Idade: 42 Anos.
-Ocupação: Vendedor de Comércio Varejista.
-Aplicativos: Facebook, Instagram e WhatsApp.
-Motivação: Gosta de ler em seus momentos vagos no trabalho, e da praticidade e comodidade de conseguir fazer isso pela internet, além de compartilhar conteúdo com outras pessoas que compartilham do mesmo gosto.
-Frustrações: Falta de disponibilidade em achar alguns livros.
-Hobbies: Leitor de obras com conteúdo filosófico e histórico, também um grande fã de futebol.
+**Idade:** 42 Anos.  
+**Ocupação:** Vendedor de Comércio Varejista.  
+**Aplicativos:** Facebook, Instagram e WhatsApp.  
+**Motivação:** Gosta de ler em seus momentos vagos no trabalho, e da praticidade e comodidade de conseguir fazer isso pela internet, além de compartilhar conteúdo com outras pessoas que compartilham do mesmo gosto.  
+**Frustrações:** Falta de disponibilidade em achar alguns livros.  
+**Hobbies:** Leitor de obras com conteúdo filosófico e histórico, também um grande fã de futebol.  
 
 ##### CECILIA LORENA
-Idade: 56 Anos.
-Ocupação: Dona de Casa.
-Aplicativos: Instagram e WhatsApp.
-Motivação Por ser muito devota ao catolicismo, Cecília pediu aos seus sobrinhos que recomendassem um site para adquirir conteúdos sobre esses temas de forma gratuita.
-Frustrações: Por achar difícil a locomoção e a falta de segurança e empatia nas ruas com as pessoas mais velhas.
-Hobbies: Gosta de ver novelas, séries e programas com conteúdos religiosos, também têm o hábito de ler muito sobre o tema.
+**Idade:** 56 Anos.  
+**Ocupação:** Dona de Casa.  
+**Aplicativos:** Instagram e WhatsApp.  
+**Motivação:** Por ser muito devota ao catolicismo, Cecília pediu aos seus sobrinhos que recomendassem um site para adquirir conteúdos sobre esses temas de forma gratuita.  
+**Frustrações:** Por achar difícil a locomoção e a falta de segurança e empatia nas ruas com as pessoas mais velhas.  
+**Hobbies:** Gosta de ver novelas, séries e programas com conteúdos religiosos, também têm o hábito de ler muito sobre o tema.  
 
 
 
@@ -53,19 +53,12 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |EU COMO...          | QUERO/PRECISO ...                  |PARA ...                                     |
 |--------------------|------------------------------------|---------------------------------------------|
 |Isabel Figueiredo   |Ter um perfil no site               |Salvar informações e configurações           |
-|--------------------|------------------------------------|---------------------------------------------|
 |Nathalia Gomes      |Categorizar a pesquisa              |Encontrar ebooks específicos de administração|
-|--------------------|------------------------------------|---------------------------------------------|
 |Guilherme Dias      |Fazer busca de livros               |Pesquisar material de apoio para o Enem      |
-|--------------------|------------------------------------|---------------------------------------------|
 |Isabel Figueiredo   |Fazer upload de ebooks              |Compartilhar materiais com a comunidade      |
-|--------------------|------------------------------------|---------------------------------------------|
 |Antônio Caldeira    |Visualizar sinopse do livro         |Ter informação sobre o material disponível   |
-|--------------------|------------------------------------|---------------------------------------------|
 |Cecilia Lorena      |Adicionar livros aos favoritos      |Salvar os melhores materiais                 |
-|--------------------|------------------------------------|---------------------------------------------|
 |Antônio Caldeira    |Fazer comentários sobre livros      |Interagir com leitores com mesmo interesse   |
-|--------------------|------------------------------------|---------------------------------------------|
 
 ## Requisitos
 
@@ -81,7 +74,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-004| A aplicação deve permitir a visualização de livros disponíveis com os dados obrigatórios do cadastro.   | ALTA |
 |RF-005| A aplicação deve permitir o download dos livros.   | ALTA |
 |RF-006| A aplicação deve ter um campo para busca de livros.   | MÉDIA |
-|RF-007| A aplicação deve permitir ao usuário editar o perfil (adicionar foto, alterar email, adicionar telefone…).   | MÉDIA |RF_008| A aplicação deve permitir ao usuário avaliar os livros que estão publicados.   | BAIXA |
+|RF-007| A aplicação deve permitir ao usuário editar o perfil (adicionar foto, alterar email, adicionar telefone…).   | MÉDIA |
+|RF-008| A aplicação deve permitir ao usuário avaliar os livros que estão publicados.   | BAIXA |
 |RF-009| A aplicação deve disponibilizar um campo para comentários nas páginas de informações dos livros publicados.   | BAIXA |
 
 
