@@ -26,11 +26,12 @@ foi utilizado para hospedagem do repositório.
 
 O projeto segue a seguinte convenção para o nome de branches:
 `d/prefixo do card-numero/nome-da-branch`
-- *main*: versão estável já testada do software;
-- *d/*: documentações;
-- *dev/*: desenvolvimento da aplicação;
-- *i/*: novas funcionalidades;
-- *b/*: correção de bug;
+- *main/*: versão estável já testada do software
+- *d/*: documentações
+- *dev/*: desenvolvimento da aplicação 
+- *f/*: novas funcionalidades
+- *b/*: correção de bug
+- *i/*: novas implementaçôes 
 - *r/*: revisões
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
