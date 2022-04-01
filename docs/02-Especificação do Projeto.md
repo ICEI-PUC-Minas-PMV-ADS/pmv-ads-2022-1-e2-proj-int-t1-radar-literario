@@ -69,7 +69,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| A aplicação deve permitir o cadastro de novos usuários por meio de um formulário contendo: nome completo, email,   senha e data de nascimento.       | ALTA | 
-|RF-002| A aplicação deve permitir que o usuário faça login com as suas credenciais cadastradas.   | ALTA |
+|RF-002| A aplicação deve permitir que o usuário faça login com as suas credenciais cadastradas e mante-lós no banco de dados.   | ALTA |
 |RF-003| A aplicação deve conter a opção de upload de livros com campos pré-definidos de publicação e de preenchimento obrigatório, como capa, autor, categoria, sinopse e faixa etária.  | ALTA |
 |RF-004| A aplicação deve permitir a visualização de livros disponíveis com os dados obrigatórios do cadastro.   | ALTA |
 |RF-005| A aplicação deve permitir o download dos livros.   | ALTA |
