@@ -77,12 +77,12 @@ A tarefas são classificadas em função da natureza ou prioridade da atividade 
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código: Visual Studio.
+- Editor de código: Visual Studio 2019
 - Ferramentas de comunicação: Microsoft Teams
 - Ferramentas para criação de diagramas: Diagrams.net
-- Ferramentas de desenho de tela (_wireframing_): Adobe XD
+- Ferramentas de desenho de tela (_wireframing_): Figma
 
 O editor de código foi escolhido porque ele possui uma integração com o sistema de versão e permite depuração na máquina local. 
-A ferramenta de comunicação utilizada foi recomendada pela Universidade e é bem completa para gestão de equipes e viabiliza chamadas de áudio, vídeo e conversa por chat. 
-Para criar diagramas Optamos pelo Diagrams.net recomendado pela professora, porque ele se adaptou-se melhor as nossas necessidades para as soluções dos problemas. 
-Por fim, a ferramenta escolhida para o desenvolvimento dos wireframes e interface de usuário foi ecolhida por permitir a edição colaborativa, além de ter funcionalidades voltadas especificamente para a natureza deste trabalho.
+A ferramenta de comunicação utilizada foi recomendada pela universidade e é bem completa para gestão de equipes e viabiliza chamadas de áudio, vídeo e conversa por chat. 
+Para criar diagramas optamos pelo Diagrams.net recomendado pela professora, porque ele integrou-se melhor às nossas necessidades para a solução de problemas. 
+Por fim, a ferramenta escolhida para o desenvolvimento dos wireframes e interface de usuário foi escolhida por permitir a edição colaborativa, além de ter funcionalidades voltadas especificamente para a natureza deste trabalho.
