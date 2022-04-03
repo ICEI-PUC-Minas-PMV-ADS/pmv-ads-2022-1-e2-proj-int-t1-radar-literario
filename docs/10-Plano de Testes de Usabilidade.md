@@ -13,7 +13,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
 
 |Caso de Teste | CT-02 - Hospedagem do site |
 |--|-------------------------------------------------------|
-|Requisitos Associados |RNF-02 - publicado em um ambiente acessível publicamente na internet (GitHub).  <br> |
+|Requisitos Associados |RNF-02 - publicado em um ambiente acessível publicamente na internet (GitHub).<br>|
 |Objetivo de Teste| Verificar se o site está hospedado em um local acessível para os usuários|
 |Passos| 1) Acessar o Navegador <br/> 2) Informar o endereço do site
 <br/> 3) verificar se a hospedagem do site funcionando de forma correta|
