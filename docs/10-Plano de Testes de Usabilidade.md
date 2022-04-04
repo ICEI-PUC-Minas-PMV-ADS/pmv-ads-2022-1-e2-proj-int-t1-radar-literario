@@ -41,5 +41,19 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
 |Passos| 1) Acessar o Navegador <br/> 2) Informar o endereço do site <br/> 3) acessar alguma funcionalidade do site <br/> 4) checar se a requisição foi processada em até 3s.|
 |Critérios de Êxito| - O usuário deve receber suas requisições em no máximo 3s.|
 
+|Caso de Teste	|CT-05 – Aplicação intuitiva |
+|--|-------------------------------------------------------|
+|Requisitos Associados |RNF-05 -A aplicação deve possuir uma interface limpa e com bom contraste. <br> |
+|Objetivo de Teste|Verificar se o site está intuitivo e de fácil uso. |
+|Passos| 1) Acessar o Navegador <br/> 2) Informar o endereço do site <br/> 3) acessar alguma funcionalidade do site <br/> 4) Verificar a usabilidade da aplicação. |
+|Critérios de Êxito| - A interface deve estar de fácil compreensão para o usuário. |
+
+|Caso de Teste	|CT-06 – Aplicação legível |
+|--|-------------------------------------------------------|
+|Requisitos Associados |RNF-06 -A aplicação deve possuir uma interface limpa e com bom contraste. <br> |
+|Objetivo de Teste|Verificar se o site está compreensível e legível |
+|Passos| 1) Acessar o Navegador <br/> 2) Informar o endereço do site <br/> 3) acessar alguma funcionalidade do site <br/> 4) Verificar a legibilidade da aplicação. |
+|Critérios de Êxito| - A interface deve estar limpa e legível.  |
+
 
 
