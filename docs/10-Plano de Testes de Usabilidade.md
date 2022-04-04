@@ -19,14 +19,6 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
 <br/> 3) verificar se a hospedagem do site funcionando de forma correta|
 |Critérios de Êxito| - O site deve estar sendo exibido para os usuários como foi programado|
 
-
-|Caso de Teste | CT-03 - Site responsivo |
-|--|-------------------------------------------------------|
-|Requisitos Associados |RNF-03 - A aplicação deve ser responsiva, se adequando ao dispositivo utilizado pelo usuário.  <br> |
-|Objetivo de Teste| Verifica se o site se adequando a diferentes tipos de dispositivos (computador, celular, tablet e etc.) |
-|Passos| 1) Acessar o site por diferentes dispositivos (computador, célula, tablet e etc.) <br/> 2) Verificar se o site se se adequando aos dispositivos |
-|Critérios de Êxito| - O site deve ser adequar as diferentes telas, e continuas com as suas funcionalidades|
-
 |Caso de Teste | CT-03 - Site responsivo |
 |--|-------------------------------------------------------|
 |Requisitos Associados |RNF-03 - A aplicação deve ser responsiva, se adequando ao dispositivo utilizado pelo usuário.  <br> |
