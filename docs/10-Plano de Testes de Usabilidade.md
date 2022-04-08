@@ -11,12 +11,12 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
 |Passos| 1) Acessar o Navegador <br/> 2) Informar o endereço do site <br/> 3) verificar se o site abriu de forma correta sem apresentar nenhum erro.|
 |Critérios de Êxito| - O conteúdo do site deve se apresentado sem nenhum erro|
 
-|Caso de Teste | CT-02 - Hospedagem do site|
+|Caso de Teste | CT-02 - Hospedagem do site |
 |--|---------------------------------------------------|
 |Requisitos Associados |RNF-01 - RNF-02 - publicado em um ambiente acessível publicamente na internet (GitHub). <br> |
 |Objetivo de Teste| Verificar se o site e compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge).|
 |Passos| 1) Acessar o Navegador <br/> 2) Informar o endereço do site
-<br/>3) verificar se a hospedagem do site funcionando de forma correta. |
+<br/>3) verificar se hospedagem do site funcionando de forma correta. |
 |Critérios de Êxito| - O site deve estar sendo exibido para os usuários como foi programado|
 
 |Caso de Teste | CT-03 - Site responsivo |
