@@ -13,9 +13,10 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 Ambiente|Plataforma|Link de Acesso
 |:--------|:----------:|:--------------:|
 |Repositório|GitHub|  [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario)|
-|Documentos do projeto|GitHubDocs|Projeto Radar Literario|[GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/tree/main/docs)|
-|Projeto de Interface e  Wireframes| Diagrams.net | [Diagrams.net](https://www.diagrams.net/)|
-|Gerenciamento do Projeto|Jira|[Jira](https://ads-puc.atlassian.net/jira/software/c/projects/RLE/boards/2/roadmap)|
+|Documentos do Projeto|GitHub (docs/)|[Projeto Radar Literario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/blob/main/README.md)|
+|Criação de Diagramas| Diagrams.net | [Diagrams.net](https://www.diagrams.net/)|
+|Projeto de Interface e  Wireframes| Figma | [Figma](https://bit.ly/RadarLiterario)|
+|Gerenciamento do Projeto|GitHub (Projects)|[GitHub (Projects)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/projects/1)|
 
 ## Controle de Versão
 
