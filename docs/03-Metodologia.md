@@ -13,25 +13,31 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 Ambiente|Plataforma|Link de Acesso
 |:--------|:----------:|:--------------:|
 |Repositório|GitHub|  [GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario)|
-|Documentos do projeto|GitHubDocs|Projeto Radar Literario|[GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/tree/main/docs)|
-|Projeto de Interface e  Wireframes| Diagrams.net | [Diagrams.net](https://www.diagrams.net/)|
-|Gerenciamento do Projeto|Jira|[Jira](https://ads-puc.atlassian.net/jira/software/c/projects/RLE/boards/2/roadmap)|
+|Documentos do Projeto|GitHub (docs/)|[Projeto Radar Literario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/blob/main/README.md)|
+|Criação de Diagramas| Diagrams.net | [Diagrams.net](https://www.diagrams.net/)|
+|Projeto de Interface e  Wireframes| Figma | [Figma](https://bit.ly/RadarLiterario)|
+|Gerenciamento do Projeto|GitHub (Projects)|[GitHub (Projects)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario/projects/1)|
 
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
 foi utilizado para hospedagem do repositório.
+
 ![](./img/gitflow.png)
 
 O projeto segue a seguinte convenção para o nome de branches:
-`d/prefixo do card-numero/nome-da-branch`
-- *main/*: versão estável já testada do software
-- *d/*: documentações
-- *dev/*: desenvolvimento da aplicação 
+
+**Principais**
+- *main*: versão estável já testada do software
+- *develop*: desenvolvimento da aplicação 
+
+**Branches de suporte (serão removidas assim que não forem mais necessárias)**
+
+`letra-da-branch/prefixo-do-card`
+
 - *f/*: novas funcionalidades
 - *b/*: correção de bug
-- *i/*: novas implementaçôes 
 - *r/*: revisões
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:

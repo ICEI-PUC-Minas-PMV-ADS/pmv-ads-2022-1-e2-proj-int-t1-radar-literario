@@ -23,7 +23,7 @@ De acordo com a figura abaixo, é representado o diagrama de fluxo das interaç�
 
 ## Wireframes
 
-Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens a seguir. Para visualizar os wireframes interativos, acesse [o ambiente no Figma do projeto](https://bit.ly/RadarLiterario).
+Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens a seguir. Para visualizar os wireframes interativos, acesse **[o ambiente no Figma do projeto](https://bit.ly/RadarLiterario)**.
 
 As telas do sistema apresentam uma estrutura comum que é apresentada na figura abaixo:
 
@@ -44,6 +44,8 @@ Caso o novo usuário clicar na opção "Entrar" no canto superior direito do cab
 
 ### Login
 
+![Imagem do fluxo da Tela de Homepage para Login](img/Wireframes/Home_para_Login.png)
+
 A tela de Login é acessado pelo usuário ao clicar em "Entrar" no canto superior direito do cabeçalho ou tentar acessar alguma função restrita sem estar conectado em sua conta e é apresentada da seguinte forma:
 
 ![Imagem da Tela de Login](img/Wireframes/Login.png)
@@ -51,6 +53,8 @@ A tela de Login é acessado pelo usuário ao clicar em "Entrar" no canto superio
 Na tela o usuário pode fazer login no site, preenchendo os campos necessários com as suas credenciais já cadastradas. O usuário também poderá ser direcionado para a [tela de cadastro](#cadastro) ao clicar na opção “Crie sua conta” e para a [tela de alteração da senha](#alteração-de-senha-etapa-1) na opção "Alterar senha", opções presentes abaixo do botão "Entrar" no formulário de Login.
 
 ### Cadastro
+
+![Imagem do fluxo da Tela de Login para Cadastro](img/Wireframes/Login_para_Cadastro.png)
 
 A tela de cadastro permite ao usuário criar uma conta no site caso ainda não seja cadastrado, seguindo um formulário com campos de preenchimento referentes a dados necessários:
 
@@ -74,6 +78,8 @@ Ao clicar no livro do resultado, o usuário é levado para a [tela de visualiza�
 
 ### Visualização do Livro
 
+![Imagem do fluxo da Tela de Busca para Visualização do Livro](img/Wireframes/Busca_para_Info_de_Livro.png)
+
 Ao selecionar uma das opções resultantes da pesquisa, é possível visualizar detalhes do livro, como capa, título, autor, sinopse, categorias, ISBN, faixa etária, idioma e ano de publicação. O usuário também tem acesso a um espaço para avaliar o livro no canto direito, fazer o download do arquivo para leitura escolhendo o melhor formato ou comentar sobre o livro acessado no canto inferior.
 
 ![Imagem da Tela de Visualização do Livro](img/Wireframes/Visualização_do_Livro.png)
@@ -81,6 +87,8 @@ Ao selecionar uma das opções resultantes da pesquisa, é possível visualizar 
 Além disso, caso o usuário queira complementar ou corrigir algumas informações ou enviar um arquivo melhor ou que esteja faltando, ele poderá clicar em "Enviar um arquivo" para acessar a [página de upload e cadastro do livro](#upload-de-livros), opção presente no mesmo espaço das opções para download.
 
 ### Upload de Livros
+
+![Imagem do fluxo da Tela de Upload e Cadastro de Livro](img/Wireframes/Upload_e_Cadastro_de_Livro.png)
 
 A tela de upload de livros é o espaço dedicada para o usuário cadastrar as informações de um livro que ainda não esteja cadastrado no site ou atualizar os dados. Nela existe campos de preenchimento obrigatórios e opcionais, são eles:
 
@@ -104,6 +112,8 @@ Além disso, existe três áreas para upload de arquivos de texto comuns para li
 
 ### Favoritos
 
+![Imagem do fluxo da Tela de Favoritos](img/Wireframes/Para_Favoritos.png)
+
 A tela de favoritos retratada abaixo permite ao usuário visualizar todos os livros que foram favoritados por ele ao clicar no ícone de coração junto da capa do livro. 
 
 ![Imagem da Tela de Favoritos](img/Wireframes/Favoritos.png)
@@ -111,6 +121,8 @@ A tela de favoritos retratada abaixo permite ao usuário visualizar todos os liv
 A página pode ser acessada em todas as telas de navegação ao manter o mouse sobre o nome do perfil no canto superior direito das telas e clicar em "Favoritos", como mostrado na [tela de busca](#tela-de-busca). Ao clicar no coração em livro que já foi favoritado, ele será removido dos favoritos e ao clicar no livro será direcionando para a [tela de visualização de livros](#visualização-do-livro).
 
 ### Minha Conta
+
+![Imagem do fluxo da Tela "Minha Conta"](img/Wireframes/Para_Perfil.png)
 
 A tela apresenta os dados pessoais de cadastro do usuário e que podem ser editados ao alterar a informação do campo desejado e clicar no botão "Confirmar". Além disso, a tela tem opções para "[Alterar minha senha](#alteração-de-senha-etapa-1)", "Excluir minha conta" e uma área no canto direito para adicionar, alterar ou remover uma foto de perfil.
 
@@ -120,6 +132,8 @@ A página pode ser acessada em todas as telas ao clicar sobre o nome do perfil n
 
 ### Alteração de Senha (Etapa 1)
 
+![Imagem do fluxo para Alterar a Senha](img/Wireframes/Para_Alterar_Senha.png)
+
 A alteração de senha é feita em 2 etapas/telas diferentes. A primeira apresenta um formulário para o usuário inserir o seu email para receber um código de verificação, este email precisa já estar em uso por alguma conta cadastrada no site.
 
 ![Imagem da Primeira Tela de Alteração de Senha](img/Wireframes/Alt._senha_-_p1.png)
@@ -127,6 +141,8 @@ A alteração de senha é feita em 2 etapas/telas diferentes. A primeira apresen
 Depois de confirmar o código de verificação recebido pelo email e clicar no botão "Próximo", o usuário é direcionado para a [segunda tela](#alteração-de-senha-etapa-2) onde poderá criar a nova senha. Caso o usuário não tenha recebido o código, ele poderá pedir o reenvio ao clicar no botão "Reenviar" ao lado do campo de inserção do código de verificação.
 
 ### Alteração de Senha (Etapa 2)
+
+![Imagem do fluxo da Tela de Alteração de Senha](img/Wireframes/Alterar_Senha_p1_para_p2.png)
 
 Nesta tela o usuário poderá redefinir a sua senha, digitando a nova senha no primeiro campo e digitando mais uma vez no segundo campo para confirmar a senha que pretende criar e evitar erros de digitação.
 
