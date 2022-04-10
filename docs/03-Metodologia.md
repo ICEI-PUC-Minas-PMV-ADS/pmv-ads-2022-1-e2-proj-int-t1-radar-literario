@@ -22,16 +22,21 @@ Ambiente|Plataforma|Link de Acesso
 A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
 foi utilizado para hospedagem do repositório.
+
 ![](./img/gitflow.png)
 
 O projeto segue a seguinte convenção para o nome de branches:
-`d/prefixo do card-numero/nome-da-branch`
-- *main/*: versão estável já testada do software
-- *d/*: documentações
-- *dev/*: desenvolvimento da aplicação 
+
+**Principais**
+- *main*: versão estável já testada do software
+- *develop*: desenvolvimento da aplicação 
+
+**Branches de suporte (serão removidas assim que não forem mais necessárias)**
+
+`letra-da-branch/prefixo-do-card`
+
 - *f/*: novas funcionalidades
 - *b/*: correção de bug
-- *i/*: novas implementaçôes 
 - *r/*: revisões
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
