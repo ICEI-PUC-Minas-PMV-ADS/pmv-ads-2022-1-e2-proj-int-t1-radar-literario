@@ -31,7 +31,6 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 
 Nesta estrutura, existem 3 grandes blocos, descritos a seguir. São eles:  
 * **Cabeçalho** - local onde são dispostos elementos fixos de identidade (logo), campo de busca, acesso à conta pessoal e opções de favoritos e inclusão de livros;
-* **Menu** - elementos de navegação;
 * **Conteúdo** - apresenta o conteúdo da tela em questão.
 
 ### Homepage
