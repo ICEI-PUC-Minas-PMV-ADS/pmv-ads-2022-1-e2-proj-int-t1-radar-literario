@@ -22,4 +22,10 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+  <Target Name="PrePublishTarget" AfterTargets="Publish">
+    <Exec Command="dotnet ef database update" />
+  </Target>
+
 </Project>
