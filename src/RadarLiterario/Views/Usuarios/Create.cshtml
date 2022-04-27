@@ -1,12 +1,12 @@
 ﻿@model RadarLiterario.Models.Usuario
 
 @{
-    ViewData["Title"] = "Cadastro";
+    ViewData["Title"] = "Cadastro - ";
 }
 
-<h1>Cadastrar-se</h1>
+<h3>Cadastrar-se</h3>
 
-<hr />
+<hr/>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -49,7 +49,7 @@
 </div>
 
 <div>
-    <a asp-controller="Usuarios" asp-action="Login">Já tenho uma conta</a>
+    <p>Já é cadastrado? <a asp-controller="Usuarios" asp-action="Login">Acesse sua conta</a></p>
 </div>
 
 @section Scripts {
