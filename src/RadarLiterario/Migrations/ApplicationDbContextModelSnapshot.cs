@@ -20,7 +20,7 @@ namespace RadarLiterario.Migrations
             modelBuilder.Entity("RadarLiterario.Models.Usuario", b =>
                 {
                     b.Property<string>("Email")
-                        .HasColumnType("varchar(767)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("ConfirmarSenha")
                         .HasColumnType("text");

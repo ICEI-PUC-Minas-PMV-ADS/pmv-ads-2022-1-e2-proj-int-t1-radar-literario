@@ -11,7 +11,7 @@ namespace RadarLiterario.Migrations
                 name: "Usuarios",
                 columns: table => new
                 {
-                    Email = table.Column<string>(type: "varchar(767)", nullable: false),
+                    Email = table.Column<string>(type: "varchar(50)", nullable: false),
                     Nome = table.Column<string>(type: "text", nullable: false),
                     Sobrenome = table.Column<string>(type: "text", nullable: false),
                     DataDeNascimento = table.Column<DateTime>(type: "datetime", nullable: false),
