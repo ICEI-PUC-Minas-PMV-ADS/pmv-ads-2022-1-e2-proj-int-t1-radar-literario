@@ -13,5 +13,7 @@ namespace RadarLiterario.Models
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Livro> Livros { get; set; }
     }
 }
