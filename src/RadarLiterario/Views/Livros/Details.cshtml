@@ -1,7 +1,8 @@
 ﻿@model RadarLiterario.Models.Livro
 
 @{
-    ViewData["Title"] = @Html.DisplayFor(model => model.titulo);
+    var title = Model.titulo + " - ";
+    ViewData["Title"] = @Html.DisplayFor(model => title);
 }
 
 <h1>@Html.DisplayFor(model => model.titulo)</h1>
