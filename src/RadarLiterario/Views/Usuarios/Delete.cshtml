@@ -32,6 +32,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Email" />
         <input type="submit" value="Deletar" class="btn btn-danger" /> |
-        <a asp-action="Index">Voltar</a>
+        <a asp-action="Details" asp-route-id="@Model.Email">Voltar</a>
     </form>
 </div>
