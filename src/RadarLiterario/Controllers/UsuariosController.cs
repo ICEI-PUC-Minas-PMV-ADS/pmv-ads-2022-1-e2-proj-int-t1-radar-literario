@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -38,7 +40,26 @@ namespace RadarLiterario.Controllers
                 bool VrfSenha = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
                 if (VrfSenha)
                 {
-                    ViewBag.Message = "Usuário conectado.";
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, user.Nome),
+                        new Claim(ClaimTypes.NameIdentifier, user.Nome)
+                    };
+
+                    var userIdentity = new ClaimsIdentity(claims, "login");
+
+                    ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                    var props = new AuthenticationProperties
+                    {
+                        AllowRefresh = true,
+                        ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7),
+                        IsPersistent = true
+                    };
+
+                    await HttpContext.SignInAsync(principal, props);
+
+                    return Redirect("/");
                 }
                 else
                 {
@@ -46,6 +67,17 @@ namespace RadarLiterario.Controllers
                 }
             }
 
+            return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "Usuarios");
+        }
+
+        public IActionResult AccessDenied()
+        {
             return View();
         }
 
@@ -88,11 +120,21 @@ namespace RadarLiterario.Controllers
         {
             if (ModelState.IsValid)
             {
-                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-                usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Login));
+                var user = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.Email == usuario.Email);
+
+                if (user != null)
+                {
+                    ModelState.AddModelError("Email", "Email já cadastrado");
+                }
+                else
+                {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                    usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
+                    _context.Add(usuario);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Login));
+                }
             }
             return View(usuario);
         }
