@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RadarLiterario.Models;
 
 namespace RadarLiterario.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220507205144_Arquivos")]
+    partial class Arquivos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,7 +29,7 @@ namespace RadarLiterario.Migrations
                         .HasColumnType("text");
 
                     b.Property<byte[]>("Dados")
-                        .HasColumnType("varbinary(35000)");
+                        .HasColumnType("varbinary(MAX)");
 
                     b.Property<string>("Descricao")
                         .HasColumnType("text");
