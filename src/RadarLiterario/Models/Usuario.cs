@@ -10,10 +10,10 @@ namespace RadarLiterario.Models
     [Table("Usuarios")]
     public class Usuario
     {
-        [Required(ErrorMessage ="É obrigatório informar o nome")]
+        [Required(ErrorMessage ="É obrigatório informar seu nome")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "É obrigatório informar o sobrenome")]
+        [Required(ErrorMessage = "É obrigatório informar seu sobrenome")]
         public string Sobrenome { get; set; }
 
         [Display(Name = "Data de nascimento"), DataType(DataType.Date), Required(ErrorMessage = "É obrigatório informar sua data de nascimento")]
@@ -25,7 +25,7 @@ namespace RadarLiterario.Models
         [Required(ErrorMessage = "É obrigatório informar uma senha"), DataType(DataType.Password)]
         public string Senha { get; set; }
 
-        [Display(Name = "Confirme a senha"), Compare("Senha", ErrorMessage = "A senha e a senha de confirmação não coincidem."), DataType(DataType.Password)]
+        [Display(Name = "Confirme a senha"), Compare("Senha", ErrorMessage = "As senhas não coincidem"), DataType(DataType.Password)]
         public string ConfirmarSenha { get; set; }
     }
 }
