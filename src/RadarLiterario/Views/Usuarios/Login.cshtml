@@ -25,14 +25,15 @@
                 <input type="submit" value="Entrar" class="btn btn-primary" />
             </div>
         </form>
-        <h4>
+        <h6 id="login-alert">
             @ViewBag.Message
-        </h4>
+        </h6><br />
     </div>
 </div>
 
 <div>
-    <p>Não é cadastrado? <a asp-controller="Usuarios" asp-action="Create">Crie sua conta</a></p>
+    Esqueceu a senha? <a asp-controller="Usuarios" asp-action="Recovery">Alterar senha</a><br />
+    Não é cadastrado? <a asp-controller="Usuarios" asp-action="Create">Crie sua conta</a>
 </div>
 
 @section Scripts {
