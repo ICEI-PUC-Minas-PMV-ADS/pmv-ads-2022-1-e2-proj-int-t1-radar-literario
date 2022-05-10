@@ -1,8 +1,18 @@
-﻿@{
+﻿@model IEnumerable<RadarLiterario.Models.Livro>
+
+
+@{
     ViewData["Title"] = "";
 }
 
 <div class="text-center">
     <h1 class="display-4">Bem-vindo!</h1>
+
     <p>Disponível em breve...</p>
+
 </div>
+        @foreach (var item in Model)
+        {
+            <h2><a asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.titulo)</a></h2>           
+        }
+    
