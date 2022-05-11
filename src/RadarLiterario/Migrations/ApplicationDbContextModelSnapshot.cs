@@ -27,7 +27,7 @@ namespace RadarLiterario.Migrations
                         .HasColumnType("text");
 
                     b.Property<byte[]>("Dados")
-                        .HasColumnType("varbinary(35000)");
+                        .HasColumnType("longblob");
 
                     b.Property<string>("Descricao")
                         .HasColumnType("text");
@@ -43,13 +43,18 @@ namespace RadarLiterario.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("ImagemCapa")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("genero")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("sinopse")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(255)
+                        .HasColumnType("tinytext");
 
                     b.Property<string>("titulo")
                         .IsRequired()

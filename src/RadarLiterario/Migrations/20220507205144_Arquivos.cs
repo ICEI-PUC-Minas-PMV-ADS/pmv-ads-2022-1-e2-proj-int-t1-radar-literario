@@ -15,7 +15,7 @@ namespace RadarLiterario.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Descricao = table.Column<string>(type: "text", nullable: true),
-                    Dados = table.Column<byte[]>(type: "varbinary(35000)", nullable: true),
+                    Dados = table.Column<byte[]>(type: "longblob", nullable: true),
                     ContentType = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>

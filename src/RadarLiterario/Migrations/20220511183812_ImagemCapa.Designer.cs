@@ -9,8 +9,8 @@ using RadarLiterario.Models;
 namespace RadarLiterario.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220507205144_Arquivos")]
-    partial class Arquivos
+    [Migration("20220511183812_ImagemCapa")]
+    partial class ImagemCapa
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,13 +45,18 @@ namespace RadarLiterario.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("ImagemCapa")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("genero")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("sinopse")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(255)
+                        .HasColumnType("tinytext");
 
                     b.Property<string>("titulo")
                         .IsRequired()
