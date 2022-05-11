@@ -7,6 +7,7 @@
 <h3>Adicionar livro</h3>
 
 <hr />
+<h5>1ª Etapa - Informações do livro:</h5>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -17,24 +18,30 @@
                 <span asp-validation-for="titulo" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ImagemCapa" class="control-label"></label>
+                <input asp-for="ImagemCapa" class="form-control" />
+                <span asp-validation-for="ImagemCapa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="genero" class="control-label"></label>
                 <input asp-for="genero" class="form-control" />
                 <span asp-validation-for="genero" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="sinopse" class="control-label"></label>
-                <input asp-for="sinopse" class="form-control" />
+                <textarea asp-for="sinopse" class="form-control"></textarea>
                 <span asp-validation-for="sinopse" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Adicionar" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-clipboard2-check"></i> Avançar
+                </button> | 
+                <a asp-controller="Livros" asp-action="Index" class="btn btn-secondary">
+                    <i class="bi bi-arrow-return-left"></i> Voltar
+                </a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-controller="Home" asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

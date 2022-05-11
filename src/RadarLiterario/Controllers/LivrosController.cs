@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -55,13 +56,26 @@ namespace RadarLiterario.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,titulo,genero,sinopse")] Livro livro)
+        public async Task<IActionResult> Create([Bind("id,titulo,ImagemCapa,genero,sinopse")] Livro livro)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(livro);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                HttpClient client = new HttpClient();
+
+                HttpResponseMessage res = await client.GetAsync(livro.ImagemCapa);
+
+                bool IsTypeImage = res.ToString().Contains("Content-Type: image");
+
+                if (IsTypeImage != true)
+                {
+                    ModelState.AddModelError("ImagemCapa", "Verifique se o URL direciona para uma imagem");
+                }
+                else
+                {
+                    _context.Add(livro);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index", "Arquivos");
+                }
             }
             return View(livro);
         }
@@ -87,7 +101,7 @@ namespace RadarLiterario.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,titulo,genero,sinopse")] Livro livro)
+        public async Task<IActionResult> Edit(int id, [Bind("id,titulo,ImagemCapa,genero,sinopse")] Livro livro)
         {
             if (id != livro.id)
             {
@@ -112,7 +126,10 @@ namespace RadarLiterario.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+
+                string idRedirect = livro.id.ToString();
+
+                return RedirectToAction(idRedirect, "Details");
             }
             return View(livro);
         }

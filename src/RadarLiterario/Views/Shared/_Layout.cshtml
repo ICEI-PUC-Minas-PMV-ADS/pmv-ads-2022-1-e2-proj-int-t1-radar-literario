@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]Radar Literário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="shortcut icon" href="~/img/favicons/favicon.ico">
@@ -16,8 +17,16 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" id="navbar-custom">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/img/logo.svg" width="200" alt="Radar Literário">
+                    <img src="~/img/logo.svg" width="200" alt="Radar Literário" id="logo">
                 </a>
+                <form class="form-inline my-2 my-lg-0 input-group mb-3">
+                    <input class="form-control border border-dark" id="input-search" type="search" placeholder="Buscar..." aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,24 +35,31 @@
                     <ul class="navbar-nav ml-auto">
                         @if (User.Identity.IsAuthenticated)
                         {
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navbar-text-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Olá, @User.Identity.Name
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" asp-area="" asp-controller="Livros" asp-action="Favorite">Favoritos</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Livros" asp-action="Create">Adicionar Livro</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Arquivos" asp-action="Index">Upar Livro</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Index">Meus Dados</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
-                            </div>
-                        </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Olá, @User.Identity.Name
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Livros" asp-action="Favorite">
+                                        <i class="bi bi-heart"></i> Favoritos
+                                    </a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Livros" asp-action="Create">
+                                        <i class="bi bi-file-earmark-plus"></i> Adicionar Livro
+                                    </a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Details" asp-route-id="">
+                                        <i class="bi bi-person"></i> Meus Dados
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Logout">
+                                        <i class="bi bi-door-open"></i> Sair
+                                    </a>
+                                </div>
+                            </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link navbar-text-link" asp-area="" asp-controller="Usuarios" asp-action="Login">Entrar</a>
+                                <a class="nav-link" asp-area="" asp-controller="Usuarios" asp-action="Login">Entrar</a>
                             </li>
                         }
                     </ul>
@@ -64,6 +80,10 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script>
+        bsCustomFileInput.init()
+    </script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
