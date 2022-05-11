@@ -5,14 +5,13 @@
     ViewData["Title"] = "";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem-vindo!</h1>
+@foreach (var item in Model)
+{
 
-    <p>Disponível em breve...</p>
+    <div class="container-fluid d-flex align-items-center">
+        <div>
+            <span><a asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.titulo)</a></span>
+        </div>
+    </div>
+}
 
-</div>
-        @foreach (var item in Model)
-        {
-            <h2><a asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.titulo)</a></h2>           
-        }
-    
