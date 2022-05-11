@@ -37,7 +37,7 @@ namespace RadarLiterario.Controllers
 
             if (user == null)
             {
-                ViewBag.Message = "Usuário e/ou senha inválivos.";
+                ViewBag.Message = "Usuário e/ou senha inválidos.";
             }
             else
             {
@@ -67,8 +67,62 @@ namespace RadarLiterario.Controllers
                 }
                 else
                 {
-                    ViewBag.Message = "Usuário e/ou senha inválivos.";
+                    ViewBag.Message = "Usuário e/ou senha inválidos.";
                 }
+            }
+
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Recovery()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Recovery([Bind("DataDeNascimento,Email,Senha,ConfirmarSenha")] Usuario usuario)
+        {
+            var user = await _context.Usuarios
+                    .FirstOrDefaultAsync(m => m.Email == usuario.Email);
+
+            if (user == null)
+            {
+                ViewBag.MessageRecovery = "Usuário e/ou data de nascimento inválidos.";
+            }
+
+            
+            if (usuario.DataDeNascimento == user.DataDeNascimento)
+            {
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                        usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
+                        _context.Update(usuario);
+                        await _context.SaveChangesAsync();
+                    }
+                    catch (DbUpdateConcurrencyException)
+                    {
+                        if (!UsuarioExists(usuario.Email))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
+                    }
+
+                    return Redirect("/");
+                }
+                
+            }
+            else
+            {
+                ViewBag.MessageRecovery = "Usuário e/ou data de nascimento inválidos.";
             }
 
             return View();
