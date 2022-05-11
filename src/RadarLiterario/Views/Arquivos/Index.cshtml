@@ -1,16 +1,21 @@
 ﻿@model IEnumerable<RadarLiterario.Models.Arquivos>
 
 @{
-    ViewData["Title"] = "Index"; 
+    ViewData["Title"] = "Upload - ";
 }
 
+<h3>Adicionar livro</h3>
+
+<hr />
+<h5>2ª Etapa - Upload do livro:</h5>
+<br />
 <form action="/Arquivos/UploadEbook" enctype="multipart/form-data" method="post">
     <input type="file" name="arquivos" multiple />
-    <br />
-    <button>Enviar Ebook</button>
+    <br /><br />
+    <button class="btn btn-primary">Confirmar</button>
 </form>
 
-
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -36,4 +41,3 @@
         }
     </tbody>
 </table>
-}

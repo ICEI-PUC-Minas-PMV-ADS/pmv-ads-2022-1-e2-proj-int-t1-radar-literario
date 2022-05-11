@@ -34,9 +34,9 @@
                 @Html.DisplayFor(modelItem => item.DataDeNascimento)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Email">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Email">Ver</a> |
-                <a asp-action="Delete" asp-route-id="@item.Email">Deletar</a>
+                <a asp-action="Edit" asp-route-id="@item.Email" class="btn btn-secondary btn-sm">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Email" class="btn btn-secondary btn-sm">Ver</a> |
+                <a asp-action="Delete" asp-route-id="@item.Email" class="btn btn-danger btn-sm">Deletar</a>
             </td>
         </tr>
 }

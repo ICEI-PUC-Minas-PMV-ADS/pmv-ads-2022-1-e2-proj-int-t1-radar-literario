@@ -1,47 +1,48 @@
-﻿@model IEnumerable<RadarLiterario.Models.Livro>
+﻿@using System.Net.Http;
+
+@model IEnumerable<RadarLiterario.Models.Livro>
 
 @{
-    ViewData["Title"] = "Livros - ";
+    ViewData["Title"] = "Biblioteca - ";
 }
 
-<h3>Livros</h3>
+<h3>Biblioteca</h3>
 
-<p>
-    <a asp-action="Create">Adicionar</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.genero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.sinopse)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.genero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sinopse)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Ver</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Deletar</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<hr />
+<section id="biblioteca" class="container">
+    <div class="row ml-4">
+        @foreach (var item in Model)
+        {
+            if (item.ImagemCapa == null)
+            {
+                item.ImagemCapa = "/img/Capa-200x300.webp";
+            }
+
+            if (Uri.IsWellFormedUriString(item.ImagemCapa, UriKind.Absolute))
+            {
+                HttpClient client = new HttpClient();
+
+                HttpResponseMessage res = await client.GetAsync(item.ImagemCapa);
+
+                bool IsTypeImage = res.ToString().Contains("Content-Type: image");
+
+                if (IsTypeImage != true)
+                {
+                    item.ImagemCapa = "/img/Capa-200x300.webp";
+                }
+            }
+            else
+            {
+                item.ImagemCapa = "/img/Capa-200x300.webp";
+            }
+
+            <div class="card m-3" style="width: 18rem;">
+                <img class="card-img-top" src="@item.ImagemCapa" alt="Capa">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.titulo)</h5>
+                    <a asp-action="Details" asp-route-id="@item.id" class="btn btn-primary">Visualizar</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

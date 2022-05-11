@@ -6,9 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using RadarLiterario.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RadarLiterario.Controllers
 {
+    [Authorize]
     public class ArquivosController : Controller
     { 
         ApplicationDbContext _context;
@@ -18,11 +20,13 @@ namespace RadarLiterario.Controllers
             _context = context;
 
         }
+
         public IActionResult Index()
         {
             var arquivos = _context.Arquivos.ToList();
             return View(arquivos);
         }
+
         [HttpPost]
         public IActionResult UploadEbook(IList<IFormFile> arquivos)
         {

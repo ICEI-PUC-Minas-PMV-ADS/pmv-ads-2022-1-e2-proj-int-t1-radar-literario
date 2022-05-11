@@ -18,24 +18,61 @@
                 <span asp-validation-for="titulo" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ImagemCapa" class="control-label"></label>
+                <input asp-for="ImagemCapa" class="form-control" />
+                <span asp-validation-for="ImagemCapa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="genero" class="control-label"></label>
                 <input asp-for="genero" class="form-control" />
                 <span asp-validation-for="genero" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="sinopse" class="control-label"></label>
-                <input asp-for="sinopse" class="form-control" />
+                <textarea asp-for="sinopse" class="form-control"></textarea>
                 <span asp-validation-for="sinopse" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-clipboard2-check"></i> Salvar
+                </button> |
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                    <i class="bi bi-trash3"></i> Deletar
+                </button> |
+                <a asp-action="Details" asp-route-id="@Model.id" class="btn btn-secondary">
+                    <i class="bi bi-arrow-return-left"></i> Voltar
+                </a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Details" asp-route-id="@Model.id">Voltar</a>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Deletar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza de que quer apagar este livro?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="bi bi-x-octagon"></i> Cancelar
+                </button> | 
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="id" />
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash3"></i> Deletar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

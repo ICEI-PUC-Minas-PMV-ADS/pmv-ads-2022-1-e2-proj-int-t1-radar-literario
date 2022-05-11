@@ -1,10 +1,10 @@
 ﻿@model RadarLiterario.Models.Usuario
 
 @{
-    ViewData["Title"] = "Minha Conta - ";
+    ViewData["Title"] = "Meus Dados - ";
 }
 
-<h3>Minha conta</h3>
+<h3>Meus dados</h3>
 
 <div>
     <hr/>
@@ -29,7 +29,9 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Email">Editar</a> |
-    <a asp-controller="Home" asp-action="Index">Voltar</a>
+
+<div class="align-text-bottom text-right">
+    <a asp-action="Edit" asp-route-id="@Model.Email">
+        <i class="bi bi-pencil-square"></i> Editar
+    </a>
 </div>
