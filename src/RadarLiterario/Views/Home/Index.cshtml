@@ -1,39 +1,69 @@
-﻿@model IEnumerable<RadarLiterario.Models.Livro>
+﻿@using System.Net.Http;
 
+@model IEnumerable<RadarLiterario.Models.Livro>
 
 @{
     ViewData["Title"] = "";
+
+    string welcome = "bem-vind@";
 }
 
-@if (User.Identity.IsAuthenticated)
-{
-    <div class="jumbotron">
-        <h1 class="display-4"><i class="bi bi-emoji-smile"></i> Bem-vindo de volta!</h1>
+<div class="jumbotron">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1 class="display-4"><i class="bi bi-emoji-smile"></i> Olá, @welcome de volta!</h1>
         <p class="lead">Aproveite a sua conta para acessar diversos livros disponiveis no <b>Radar Literário</b>.</p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Livros" asp-action="Index" role="button">Biblioteca</a>
         </p>
-    </div>
-}
-else
-{
-    <div class="jumbotron">
-        <h1 class="display-4"><i class="bi bi-emoji-laughing"></i> Olá, bem-vindo! <i class="bi bi-balloon-heart"></i></h1>
+    }
+    else
+    {
+        <h1 class="display-4"><i class="bi bi-emoji-laughing"></i> Olá, @welcome! <i class="bi bi-balloon-heart"></i></h1>
         <p class="lead">ENCONTRE LIVROS, APOSTILAS, QUADRINHOS E MUITO MAIS...</p>
         <hr class="my-4">
         <p>Pronto para ter sua experiência no <b>Radar Literário</b>?</p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Usuarios" asp-action="Create" role="button">Cadastre-se</a>
         </p>
-    </div>
-}
-@foreach (var item in Model)
-{
+    }
+</div>
+<br />
+<div id="Add-Recentemente" class="container">
+    <h3>Adicionados recentemente</h3>
+    <div class="row ml-4">
+        @foreach (var item in Model.Reverse().Take(5))
+        {
+            if (item.ImagemCapa == null)
+            {
+                item.ImagemCapa = "/img/Capa-200x300.webp";
+            }
 
-    <div class="container-fluid d-flex align-items-center">
-        <div>
-            <span><a asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.titulo)</a></span>
-        </div>
-    </div>
-}
+            if (Uri.IsWellFormedUriString(item.ImagemCapa, UriKind.Absolute))
+            {
+                HttpClient client = new HttpClient();
 
+                HttpResponseMessage res = await client.GetAsync(item.ImagemCapa);
+
+                bool IsTypeImage = res.ToString().Contains("Content-Type: image");
+
+                if (IsTypeImage != true)
+                {
+                    item.ImagemCapa = "/img/Capa-200x300.webp";
+                }
+            }
+            else
+            {
+                item.ImagemCapa = "/img/Capa-200x300.webp";
+            }
+
+            <div class="card m-3" style="width: 18rem;">
+                <img class="card-img-top" src="@item.ImagemCapa" alt="Capa">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.titulo)</h5>
+                    <a asp-controller="Livros" asp-action="Details" asp-route-id="@item.id" class="btn btn-primary">Visualizar</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
