@@ -92,6 +92,12 @@ body {
     background-color: antiquewhite !important;
 }
 
+@media (max-width: 1199px) {
+    .card {
+        width: 18rem !important;
+    }
+}
+
 @media (min-width: 992px) {
     .mb-lg-0, .my-lg-0 {
         width: 40%;

@@ -32,7 +32,7 @@
 <div id="Add-Recentemente" class="container">
     <h3>Adicionados recentemente</h3>
     <div class="row ml-4">
-        @foreach (var item in Model.Reverse().Take(5))
+        @foreach (var item in Model.Reverse().Take(4))
         {
             if (item.ImagemCapa == null)
             {
@@ -57,7 +57,7 @@
                 item.ImagemCapa = "/img/Capa-200x300.webp";
             }
 
-            <div class="card m-3" style="width: 18rem;">
+            <div class="card m-3" style="width: 14rem;">
                 <img class="card-img-top" src="@item.ImagemCapa" alt="Capa">
                 <div class="card-body">
                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.titulo)</h5>
