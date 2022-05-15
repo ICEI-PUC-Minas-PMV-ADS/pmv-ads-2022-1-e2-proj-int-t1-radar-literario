@@ -1,12 +1,31 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+## CT-01 - Cadastrar usuário
+![](img/Registro.Testes//Cadastro.jpeg)
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
-## Avaliação
+## CT-02 - Se conectar com os dados de acesso cadastrado
+![](img/Registro.Testes//Login.jpg)
+![](img/Registro.Testes//Login2.jpg)
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+## CT-03 - Fazer upload de livro
+![](img/Registro.Testes//AddLivro2.jpg)
+![](img/Registro.Testes//AddLivro3.jpg)
+![](img/Registro.Testes//AddLivro4.jpg)
+
+## CT-04 - Visualizar as informações do livro escolhido
+![](img/Registro.Testes//Visualizar.jpg)
+
+
+## CT-05 - Fazer download de livro
+![](img/Registro.Testes//Download.jpg)
+
+## CT-06 - Pesquisar um livro
+![](img/Registro.Testes//Pesquisa.jpg)
+
+## CT-07 - Visualizar e editar dados do usuário
+![](img/Registro.Testes//DadosUser.jpg)
+
+## CT-08 - Avaliar e comentar os livros disponíveis
+Sera implementado na proxima etapa!
