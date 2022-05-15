@@ -24,29 +24,6 @@ namespace RadarLiterario.Controllers
             return View(await _context.Livros.ToListAsync());
         }
 
-        // GET: Livros/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var Home = await _context.Livros
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (Home == null)
-            {
-                return NotFound();
-            }
-
-            return View(Home);
-        }
-
-        //public IActionResult Index()
-        //{
-        //    return View();
-        // }
-
         public IActionResult Privacy()
         {
             return View();

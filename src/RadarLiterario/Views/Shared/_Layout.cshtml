@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
@@ -22,7 +24,7 @@
                 <form class="form-inline my-2 my-lg-0 input-group mb-3">
                     <input class="form-control border border-dark" id="input-search" type="search" placeholder="Buscar..." aria-label="Search">
                     <div class="input-group-append">
-                        <button class="btn btn-dark" type="submit">
+                        <button class="btn btn-dark" id="button-search" type="submit">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
@@ -40,13 +42,10 @@
                                     Olá, @User.Identity.Name
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-area="" asp-controller="Livros" asp-action="Favorite">
-                                        <i class="bi bi-heart"></i> Favoritos
-                                    </a>
                                     <a class="dropdown-item" asp-area="" asp-controller="Livros" asp-action="Create">
                                         <i class="bi bi-file-earmark-plus"></i> Adicionar Livro
                                     </a>
-                                    <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Details" asp-route-id="">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Details" asp-route-id="@User.FindFirstValue(ClaimTypes.Email)">
                                         <i class="bi bi-person"></i> Meus Dados
                                     </a>
                                     <div class="dropdown-divider"></div>
@@ -76,6 +75,7 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - Radar Literário - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+            <a class="float-right" href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e2-proj-int-t1-radar-literario"><i class="bi bi-github"></i> GitHub</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

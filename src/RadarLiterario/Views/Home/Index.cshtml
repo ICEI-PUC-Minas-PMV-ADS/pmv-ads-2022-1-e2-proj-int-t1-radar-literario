@@ -14,7 +14,7 @@
         <h1 class="display-4"><i class="bi bi-emoji-smile"></i> Olá, @welcome de volta!</h1>
         <p class="lead">Aproveite a sua conta para acessar diversos livros disponiveis no <b>Radar Literário</b>.</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Livros" asp-action="Index" role="button">Biblioteca</a>
+            <a class="btn btn-dark btn-lg" asp-area="" asp-controller="Livros" asp-action="Index" role="button">Biblioteca</a>
         </p>
     }
     else
@@ -24,7 +24,7 @@
         <hr class="my-4">
         <p>Pronto para ter sua experiência no <b>Radar Literário</b>?</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Usuarios" asp-action="Create" role="button">Cadastre-se</a>
+            <a class="btn btn-dark btn-lg" asp-area="" asp-controller="Usuarios" asp-action="Create" role="button">Cadastre-se</a>
         </p>
     }
 </div>
@@ -61,7 +61,7 @@
                 <img class="card-img-top" src="@item.ImagemCapa" alt="Capa">
                 <div class="card-body">
                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.titulo)</h5>
-                    <a asp-controller="Livros" asp-action="Details" asp-route-id="@item.id" class="btn btn-primary">Visualizar</a>
+                    <a class="btn btn-dark" asp-controller="Livros" asp-action="Details" asp-route-id="@item.id">Visualizar</a>
                 </div>
             </div>
         }
