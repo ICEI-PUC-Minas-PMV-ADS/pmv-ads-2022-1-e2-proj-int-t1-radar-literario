@@ -1,0 +1,126 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* Customizações
+-------------------------------------------------- */
+#navbar-custom {
+    background-color: #885053;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+#login-alert {
+    color: red;
+}
+
+#input-search {
+    border-radius: 10px 0px 0px 10px !important;
+}
+
+#button-search {
+    border-radius: 0px 10px 10px 0px !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 500 !important;
+}
+
+.footer {
+    background-color: white !important;
+}
+
+.jumbotron {
+    background-color: antiquewhite !important;
+}
+
+@media (max-width: 1199px) {
+    .card {
+        width: 18rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .mb-lg-0, .my-lg-0 {
+        width: 40%;
+        right: -130px !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 576px){
+    #logo{
+        width: 50%;
+    }
+    .mb-lg-0, .my-lg-0 {
+        width: 75% !important;
+    }
+}
+

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<RadarLiterario.Models.Arquivos>
+
+@{
+    ViewData["Title"] = "Upload - ";
+}
+
+<h3>Adicionar livro</h3>
+
+<hr />
+<h5>Upload do arquivo:</h5>
+<br />
+<form action="/Arquivos/UploadEbook" enctype="multipart/form-data" method="post">
+    <input type="file" name="arquivos"/>
+    <br /><br />
+    Confirme o livro deste arquivo: 
+    <select id="idLivro" name="idLivro" asp-items="ViewBag.LivroId"></select>
+    <br /><br />
+    <button class="btn btn-dark">Confirmar</button>
+</form>
+

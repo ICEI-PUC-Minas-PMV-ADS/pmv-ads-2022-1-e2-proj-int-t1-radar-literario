@@ -1,0 +1,84 @@
+﻿@using System.Net.Http;
+
+@model RadarLiterario.Models.Livro
+
+@{
+    var title = Model.titulo + " - ";
+    ViewData["Title"] = @Html.DisplayFor(model => title);
+
+    if (Model.ImagemCapa == null)
+    {
+        Model.ImagemCapa = "/img/Capa-200x300.webp";
+    }
+
+    if (Uri.IsWellFormedUriString(Model.ImagemCapa, UriKind.Absolute))
+    {
+        HttpClient client = new HttpClient();
+
+        HttpResponseMessage res = await client.GetAsync(Model.ImagemCapa);
+
+        bool IsTypeImage = res.ToString().Contains("Content-Type: image");
+
+        if (IsTypeImage != true)
+        {
+            Model.ImagemCapa = "/img/Capa-200x300.webp";
+        }
+    }
+    else
+    {
+        Model.ImagemCapa = "/img/Capa-200x300.webp";
+    }
+}
+
+<h1>@Html.DisplayFor(model => model.titulo)</h1>
+
+<div>
+    <hr />
+    <img src="@Model.ImagemCapa" alt="Capa" class="img-thumbnail rounded float-left img-fluid" width="250">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.sinopse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.sinopse)
+        </dd>
+    </dl>
+</div>
+<br />
+<div class="align-text-bottom text-right">
+    <a asp-action="Edit" asp-route-id="@Model.id">
+        <i class="bi bi-pencil-square"></i> Editar
+    </a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Arquivos
+            </th>
+            <th>
+                <a class="float-right font-weight-normal" asp-area="" asp-controller="Arquivos" asp-action="Index"><i class="bi bi-file-earmark-arrow-up"></i> Enviar arquivos</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Arquivos)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-dark float-right" asp-controller="Arquivos" asp-action="Visualizar" asp-route-id="@item.Id" target="_blank"><i class="bi bi-download"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

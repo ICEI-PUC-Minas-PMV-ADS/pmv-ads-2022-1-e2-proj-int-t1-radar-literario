@@ -1,0 +1,44 @@
+﻿@model IEnumerable<RadarLiterario.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuários - ";
+}
+
+<h3>Usuários</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobrenome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDeNascimento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDeNascimento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Email" class="btn btn-secondary btn-sm">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Email" class="btn btn-secondary btn-sm">Ver</a> |
+                <a asp-action="Delete" asp-route-id="@item.Email" class="btn btn-danger btn-sm">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

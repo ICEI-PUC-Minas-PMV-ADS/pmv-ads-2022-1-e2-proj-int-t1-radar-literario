@@ -1,0 +1,52 @@
+﻿@model RadarLiterario.Models.Usuario
+
+@{
+    ViewData["Title"] = "Recuperar Senha - ";
+}
+
+<h1>Recuperar Senha</h1>
+
+<h4>Confirme seus dados</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Recovery">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDeNascimento" class="control-label"></label>
+                <input asp-for="DataDeNascimento" class="form-control" />
+                <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmarSenha" class="control-label"></label>
+                <input asp-for="ConfirmarSenha" class="form-control" />
+                <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Confirmar" class="btn btn-dark" />
+            </div>
+        </form>
+        <h6 id="login-alert">
+            @ViewBag.MessageRecovery
+        </h6><br />
+    </div>
+</div>
+
+<div>
+    Lembrou a senha? <a asp-controller="Usuarios" asp-action="Login">Acesse sua conta</a><br />
+    Não é cadastrado? <a asp-controller="Usuarios" asp-action="Create">Crie sua conta</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
