@@ -56,3 +56,29 @@
         <i class="bi bi-pencil-square"></i> Editar
     </a>
 </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Arquivos
+            </th>
+            <th>
+                <a class="float-right font-weight-normal" asp-area="" asp-controller="Arquivos" asp-action="Index"><i class="bi bi-file-earmark-arrow-up"></i> Enviar arquivos</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Arquivos)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-dark float-right" asp-controller="Arquivos" asp-action="Visualizar" asp-route-id="@item.Id" target="_blank"><i class="bi bi-download"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

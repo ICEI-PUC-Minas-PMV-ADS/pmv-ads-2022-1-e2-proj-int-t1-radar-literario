@@ -32,5 +32,6 @@ namespace RadarLiterario.Models
             MaxLength(255, ErrorMessage = "A sinopse não pode ser maior que 255 caracteres")]
         public string sinopse { get; set; }
 
+        public ICollection<Arquivos> Arquivos { get; set; }
     }
 }

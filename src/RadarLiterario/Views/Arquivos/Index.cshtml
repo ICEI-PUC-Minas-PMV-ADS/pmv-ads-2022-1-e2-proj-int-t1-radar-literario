@@ -7,37 +7,14 @@
 <h3>Adicionar livro</h3>
 
 <hr />
-<h5>2ª Etapa - Upload do livro:</h5>
+<h5>Upload do arquivo:</h5>
 <br />
 <form action="/Arquivos/UploadEbook" enctype="multipart/form-data" method="post">
-    <input type="file" name="arquivos" multiple />
+    <input type="file" name="arquivos"/>
     <br /><br />
-    <button class="btn btn-primary">Confirmar</button>
+    Confirme o livro deste arquivo: 
+    <select id="idLivro" name="idLivro" asp-items="ViewBag.LivroId"></select>
+    <br /><br />
+    <button class="btn btn-dark">Confirmar</button>
 </form>
 
-<br />
-<table class="table">
-    <thead>
-        <tr>
-
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    <a asp-action="Visualizar" asp-route-id="@item.Id" target="_blank">Visualizar</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>

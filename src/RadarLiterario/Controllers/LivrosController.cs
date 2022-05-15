@@ -36,6 +36,7 @@ namespace RadarLiterario.Controllers
             }
 
             var livro = await _context.Livros
+                .Include(t => t.Arquivos)
                 .FirstOrDefaultAsync(m => m.id == id);
             if (livro == null)
             {
@@ -68,12 +69,13 @@ namespace RadarLiterario.Controllers
 
                 if (IsTypeImage != true)
                 {
-                    ModelState.AddModelError("ImagemCapa", "Verifique se o URL direciona para uma imagem");
+                    ModelState.AddModelError("ImagemCapa", "Verifique se o URL é de uma imagem");
                 }
                 else
                 {
                     _context.Add(livro);
                     await _context.SaveChangesAsync();
+
                     return RedirectToAction("Index", "Arquivos");
                 }
             }

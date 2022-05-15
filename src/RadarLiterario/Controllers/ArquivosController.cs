@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using RadarLiterario.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RadarLiterario.Controllers
 {
@@ -23,12 +24,12 @@ namespace RadarLiterario.Controllers
 
         public IActionResult Index()
         {
-            var arquivos = _context.Arquivos.ToList();
-            return View(arquivos);
+            ViewData["LivroId"] = new SelectList(_context.Livros, "id", "titulo");
+            return View();
         }
 
         [HttpPost]
-        public IActionResult UploadEbook(IList<IFormFile> arquivos)
+        public IActionResult UploadEbook(int idLivro, IList<IFormFile> arquivos)
         {
             IFormFile ebookCarregado = arquivos.FirstOrDefault();
 
@@ -39,6 +40,7 @@ namespace RadarLiterario.Controllers
 
                 Arquivos arqui = new Arquivos()
                 {
+                    LivroId = idLivro,
                     Descricao = ebookCarregado.FileName,
                     Dados = ms.ToArray(),
                     ContentType = ebookCarregado.ContentType
