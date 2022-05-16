@@ -16,16 +16,28 @@ namespace RadarLiterario.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public LivrosController(ApplicationDbContext context)
+       public LivrosController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         // GET: Livros
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string id)
+        {
+            var livro = from m in _context.Livros
+                        select m;
+
+            if (!String.IsNullOrEmpty(id))
+            {
+                livro = livro.Where(s => s.titulo.Contains(id));
+            }
+
+            return View(await livro.ToListAsync());
+        }
+        /* public async Task<IActionResult> Index()
         {
             return View(await _context.Livros.ToListAsync());
-        }
+        }*/
 
         // GET: Livros/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -21,8 +21,8 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/img/logo.svg" width="200" alt="Radar Literário" id="logo">
                 </a>
-                <form class="form-inline my-2 my-lg-0 input-group mb-3">
-                    <input class="form-control border border-dark" id="input-search" type="search" placeholder="Buscar..." aria-label="Search">
+                <form class="form-inline my-2 my-lg-0 input-group mb-3" asp-controller="Livros" asp-action="Index" method="get">
+                    <input class="form-control border border-dark" id="input-search"  type="text" name="id"  placeholder="Buscar..." aria-label="Search">
                     <div class="input-group-append">
                         <button class="btn btn-dark" id="button-search" type="submit">
                             <i class="bi bi-search"></i>
