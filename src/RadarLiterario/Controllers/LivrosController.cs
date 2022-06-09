@@ -34,10 +34,6 @@ namespace RadarLiterario.Controllers
 
             return View(await livro.ToListAsync());
         }
-        /* public async Task<IActionResult> Index()
-        {
-            return View(await _context.Livros.ToListAsync());
-        }*/
 
         // GET: Livros/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -73,23 +69,33 @@ namespace RadarLiterario.Controllers
         {
             if (ModelState.IsValid)
             {
-                HttpClient client = new HttpClient();
+                var livroExistente = await _context.Livros
+                .FirstOrDefaultAsync(m => m.titulo == livro.titulo);
 
-                HttpResponseMessage res = await client.GetAsync(livro.ImagemCapa);
-
-                bool IsTypeImage = res.ToString().Contains("Content-Type: image");
-
-                if (IsTypeImage != true)
+                if (livroExistente != null)
                 {
-                    ModelState.AddModelError("ImagemCapa", "Verifique se o URL é de uma imagem");
+                    ModelState.AddModelError("titulo", "Livro já cadastrado");
                 }
                 else
                 {
-                    _context.Add(livro);
-                    await _context.SaveChangesAsync();
+                    HttpClient client = new HttpClient();
 
-                    return RedirectToAction("Index", "Arquivos");
-                }
+                    HttpResponseMessage res = await client.GetAsync(livro.ImagemCapa);
+
+                    bool IsTypeImage = res.ToString().Contains("Content-Type: image");
+
+                    if (IsTypeImage != true)
+                    {
+                        ModelState.AddModelError("ImagemCapa", "Verifique se o URL é de uma imagem");
+                    }
+                    else
+                    {
+                        _context.Add(livro);
+                        await _context.SaveChangesAsync();
+
+                        return RedirectToAction("Upload", "Arquivos", new { livro.id });
+                    }
+                }  
             }
             return View(livro);
         }
@@ -141,9 +147,7 @@ namespace RadarLiterario.Controllers
                     }
                 }
 
-                string idRedirect = livro.id.ToString();
-
-                return RedirectToAction(idRedirect, "Details");
+                return RedirectToAction("Details", new { livro.id });
             }
             return View(livro);
         }
