@@ -75,58 +75,80 @@ namespace RadarLiterario.Controllers
             return View();
         }
 
-        [AllowAnonymous]
-        public IActionResult Recovery()
-        {
-            return View();
-        }
-
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Recovery([Bind("DataDeNascimento,Email,Senha,ConfirmarSenha")] Usuario usuario)
+        public async Task<IActionResult> Verify([Bind("Email,DataDeNascimento")] Usuario usuario)
         {
             var user = await _context.Usuarios
                     .FirstOrDefaultAsync(m => m.Email == usuario.Email);
 
             if (user == null)
             {
-                ViewBag.MessageRecovery = "Usuário e/ou data de nascimento inválidos.";
+                ViewBag.MessageVerify = "Usuário e/ou data de nascimento inválidos.";
             }
-
             
             if (usuario.DataDeNascimento == user.DataDeNascimento)
             {
-                if (ModelState.IsValid)
-                {
-                    try
-                    {
-                        usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-                        usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
-                        _context.Update(usuario);
-                        await _context.SaveChangesAsync();
-                    }
-                    catch (DbUpdateConcurrencyException)
-                    {
-                        if (!UsuarioExists(usuario.Email))
-                        {
-                            return NotFound();
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
 
-                    return Redirect("/");
-                }
-                
+                return RedirectToAction("Recovery", "Usuarios", new { id = usuario.Email });
             }
             else
             {
-                ViewBag.MessageRecovery = "Usuário e/ou data de nascimento inválidos.";
+                ViewBag.MessageVerify = "Usuário e/ou data de nascimento inválidos.";
             }
 
             return View();
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Recovery(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return View(usuario);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        public async Task<IActionResult> Recovery(string id, [Bind("Nome,Sobrenome,DataDeNascimento,Email,Senha,ConfirmarSenha")] Usuario usuario)
+        {
+            if (id != usuario.Email)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                    usuario.ConfirmarSenha = BCrypt.Net.BCrypt.HashPassword(usuario.ConfirmarSenha);
+                    _context.Update(usuario);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioExists(usuario.Email))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Login));
+            }
+            return View(usuario);
         }
 
         [AllowAnonymous]
@@ -151,13 +173,14 @@ namespace RadarLiterario.Controllers
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null)
+            if (id == null || id != User.FindFirstValue(ClaimTypes.Email))
             {
                 return NotFound();
             }
 
             var usuario = await _context.Usuarios
                 .FirstOrDefaultAsync(m => m.Email == id);
+
             if (usuario == null)
             {
                 return NotFound();
@@ -205,7 +228,7 @@ namespace RadarLiterario.Controllers
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null)
+            if (id == null || id != User.FindFirstValue(ClaimTypes.Email))
             {
                 return NotFound();
             }
