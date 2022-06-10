@@ -75,8 +75,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-005| A aplicação deve permitir o download dos livros.   | ALTA |
 |RF-006| A aplicação deve ter um campo para busca de livros.   | MÉDIA |
 |RF-007| A aplicação deve permitir ao usuário editar o perfil (adicionar foto, alterar email, adicionar telefone…).   | MÉDIA |
-|RF-008| A aplicação deve permitir ao usuário avaliar os livros que estão publicados.   | BAIXA |
-|RF-009| A aplicação deve permitir que o usuario recupere sua senha.   | ALTA |
+|RF-008| A aplicação deve permitir que o usuario recupere sua senha.   | ALTA |
 
 
 ### Requisitos não Funcionais

@@ -66,7 +66,7 @@ Os testes funcionais a serem realizados no software são descritos a seguir.
 
 |Caso de Teste | CT-08 - Recuperar senha|
 |--|-------------------------------------------------------|
-|Requisitos Associados |RF-09 - A aplicação deve permitir que o usuario recupere sua senha. <br> RF-09 A aplicação deve disponibilizar um formlario exigindo informarções exclusivas do usuario para validar a recuperação de senha.|
+|Requisitos Associados |RF-08 - A aplicação deve permitir que o usuario recupere sua senha. <br> RF-08 A aplicação deve disponibilizar um formlario exigindo informarções exclusivas do usuario para validar a recuperação de senha.|
 |Objetivo de Teste| Permitir que o usuario tenha a possibilidade de recuperar sua senha em caso de esquecimento. <br>|
 |Passos| 1) Acessar o Navegador <br> 2) Informar o endereço do site <br> 3) Visualizar a tela de login <br> 4) Clicar em esqueci minha senha <br> 5) Preencher formulario de recuperação de senha <br> 6) Inserir nova senha |
 |Critérios de Êxito| - O usuario deve conseguir logar na aplicação utilizando a nova senha. <br>|
