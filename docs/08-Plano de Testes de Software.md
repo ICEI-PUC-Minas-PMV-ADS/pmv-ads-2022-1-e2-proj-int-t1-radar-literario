@@ -64,9 +64,9 @@ Os testes funcionais a serem realizados no software são descritos a seguir.
 |Critérios de Êxito| - Os dados do usuário devem ser atualizados no banco de dados <br> - O formulário deve apresentar os novos dados|
 
 
-|Caso de Teste | CT-08 - Avaliar e comentar os livros disponíveis|
+|Caso de Teste | CT-08 - Recuperar senha|
 |--|-------------------------------------------------------|
-|Requisitos Associados |RF-08 - A aplicação deve permitir ao usuário avaliar e comentar os livros que estão publicados. <br> RF-09 A aplicação deve disponibilizar um campo para comentários nas páginas de informações dos livros publicados. |
-|Objetivo de Teste| Verificar se o sistema de avaliação e comentários estão funcionando <br>|
-|Passos| 1) Acessar o Navegador <br> 2) Informar o endereço do site <br> 3) Visualizar a tela de busca <br> 4) Clicar em qualquer livro da página <br> 5) Selecionar a quantidade de estrelas desejadas e submeter a avaliação <br> 6) Clicar no botão de inserir comentário e submeter o mesmo |
-|Critérios de Êxito| - Os comentários devem ser salvos no banco de dados e visíveis a todos os usuários <br> - A avaliação deve ser salva no banco de dados <br> - O livro deve conter uma média de avaliações visíveis a todos os usuários |
+|Requisitos Associados |RF-08 - A aplicação deve permitir que o usuario recupere sua senha. <br> RF-08 A aplicação deve disponibilizar um formlario exigindo informarções exclusivas do usuario para validar a recuperação de senha.|
+|Objetivo de Teste| Permitir que o usuario tenha a possibilidade de recuperar sua senha em caso de esquecimento. <br>|
+|Passos| 1) Acessar o Navegador <br> 2) Informar o endereço do site <br> 3) Visualizar a tela de login <br> 4) Clicar em esqueci minha senha <br> 5) Preencher formulario de recuperação de senha <br> 6) Inserir nova senha |
+|Critérios de Êxito| - O usuario deve conseguir logar na aplicação utilizando a nova senha. <br>|
