@@ -22,14 +22,19 @@ namespace RadarLiterario.Controllers
 
         }
 
-        public IActionResult Index()
+        public IActionResult Upload(string id)
         {
-            ViewData["LivroId"] = new SelectList(_context.Livros, "id", "titulo");
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["LivroId"] = id;
             return View();
         }
 
         [HttpPost]
-        public IActionResult UploadEbook(int idLivro, IList<IFormFile> arquivos)
+        public IActionResult Upload(int livro_id, IList<IFormFile> arquivos)
         {
             IFormFile ebookCarregado = arquivos.FirstOrDefault();
 
@@ -40,7 +45,7 @@ namespace RadarLiterario.Controllers
 
                 Arquivos arqui = new Arquivos()
                 {
-                    LivroId = idLivro,
+                    LivroId = livro_id,
                     Descricao = ebookCarregado.FileName,
                     Dados = ms.ToArray(),
                     ContentType = ebookCarregado.ContentType
@@ -50,12 +55,17 @@ namespace RadarLiterario.Controllers
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Livros", new { id = livro_id });
         }
 
-        public IActionResult Visualizar(int id)
+        public IActionResult Visualizar(string id)
         {
-            var arquivosBanco = _context.Arquivos.FirstOrDefault(a => a.Id == id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var arquivosBanco = _context.Arquivos.FirstOrDefault(a => a.Id.ToString() == id);
 
             return File(arquivosBanco.Dados, arquivosBanco.ContentType);
         }

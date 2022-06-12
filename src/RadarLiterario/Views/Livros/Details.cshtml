@@ -8,7 +8,7 @@
 
     if (Model.ImagemCapa == null)
     {
-        Model.ImagemCapa = "/img/Capa-200x300.webp";
+        Model.ImagemCapa = "/img/Capa-200x300.jpg";
     }
 
     if (Uri.IsWellFormedUriString(Model.ImagemCapa, UriKind.Absolute))
@@ -21,12 +21,12 @@
 
         if (IsTypeImage != true)
         {
-            Model.ImagemCapa = "/img/Capa-200x300.webp";
+            Model.ImagemCapa = "/img/Capa-200x300.jpg";
         }
     }
     else
     {
-        Model.ImagemCapa = "/img/Capa-200x300.webp";
+        Model.ImagemCapa = "/img/Capa-200x300.jpg";
     }
 }
 
@@ -63,7 +63,9 @@
                 Arquivos
             </th>
             <th>
-                <a class="float-right font-weight-normal" asp-area="" asp-controller="Arquivos" asp-action="Index"><i class="bi bi-file-earmark-arrow-up"></i> Enviar arquivos</a>
+                <a class="float-right font-weight-normal" asp-controller="Arquivos" asp-action="Upload" asp-route-id="@Model.id">
+                    <i class="bi bi-file-earmark-arrow-up"></i> Enviar arquivos
+                </a>
             </th>
         </tr>
     </thead>
@@ -76,7 +78,9 @@
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    <a class="btn btn-sm btn-dark float-right" asp-controller="Arquivos" asp-action="Visualizar" asp-route-id="@item.Id" target="_blank"><i class="bi bi-download"></i></a>
+                    <a class="btn btn-sm btn-dark float-right" asp-controller="Arquivos" asp-action="Visualizar" asp-route-id="@item.Id" target="_blank">
+                        <i class="bi bi-download"></i>
+                    </a>
                 </td>
             </tr>
         }

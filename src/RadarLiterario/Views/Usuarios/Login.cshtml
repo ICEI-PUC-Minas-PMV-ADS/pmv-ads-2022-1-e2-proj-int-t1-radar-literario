@@ -6,7 +6,7 @@
 
 <h3>Entrar</h3>
 
-<hr/>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Login">
@@ -32,8 +32,49 @@
 </div>
 
 <div>
-    Esqueceu a senha? <a asp-controller="Usuarios" asp-action="Recovery">Alterar senha</a><br />
+    Esqueceu a senha? <a href="#" data-toggle="modal" data-target="#RecoveryModal">Alterar senha</a><br />
     Não é cadastrado? <a asp-controller="Usuarios" asp-action="Create">Crie sua conta</a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="RecoveryModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Confirme alguns dados:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Verify">
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DataDeNascimento" class="control-label"></label>
+                        <input asp-for="DataDeNascimento" class="form-control" />
+                        <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+                    </div>
+
+                    <h6 id="login-alert">
+                        @ViewBag.MessageVerify
+                    </h6><br />
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="bi bi-x-octagon"></i> Cancelar
+                        </button> |
+                        <button type="submit" class="btn btn-dark">
+                            Alterar senha
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

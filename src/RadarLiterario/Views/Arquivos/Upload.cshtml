@@ -9,11 +9,9 @@
 <hr />
 <h5>Upload do arquivo:</h5>
 <br />
-<form action="/Arquivos/UploadEbook" enctype="multipart/form-data" method="post">
+<form action="/Arquivos/Upload" enctype="multipart/form-data" method="post">
     <input type="file" name="arquivos"/>
-    <br /><br />
-    Confirme o livro deste arquivo: 
-    <select id="idLivro" name="idLivro" asp-items="ViewBag.LivroId"></select>
+    <input type="hidden" name="livro_id" value="@ViewBag.LivroId"/>
     <br /><br />
     <button class="btn btn-dark">Confirmar</button>
 </form>
